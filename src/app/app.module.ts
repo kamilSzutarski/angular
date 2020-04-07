@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxsRouterPluginModule } from '@ngxs/router-plugin';
+import { PublicModule } from './components/public/public.module';
+import { LoggedModule } from './components/logged/logged.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    PublicModule,
+    LoggedModule,
+    NgxsRouterPluginModule.forRoot()
     //BrowserAnimationsModule
   ],
   providers: [],

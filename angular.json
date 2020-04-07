@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "tickets"
+  "defaultProject": "tickets",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
