@@ -1,0 +1,11 @@
+export { Department } from './models/department';
+export { Operator } from './models/operator';
+export { Pageable } from './models/pageable';
+export { PageDepartment } from './models/page-department';
+export { PageOperator } from './models/page-operator';
+export { PageTicketElement } from './models/page-ticket-element';
+export { PageTicketHeader } from './models/page-ticket-header';
+export { Role } from './models/role';
+export { Sort } from './models/sort';
+export { TicketElement } from './models/ticket-element';
+export { TicketHeader } from './models/ticket-header';
