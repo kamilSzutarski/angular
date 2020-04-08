@@ -21,7 +21,7 @@ class OperatorControllerService extends __BaseService {
   static readonly saveOperatorUsingPOSTPath = '/api/operator';
   static readonly editOperatorUsingPUTPath = '/api/operator';
   static readonly removeOperatorUsingDELETEPath = '/api/operator';
-  static readonly getOperatorUsingGETPath = '/api/operator/id/{id}';
+  static readonly getOperatorUsingGETPath = '/api/operator/{login}';
 
   constructor(
     config: __Configuration,
@@ -204,17 +204,17 @@ class OperatorControllerService extends __BaseService {
 
   /**
    * getOperator
-   * @param id id
+   * @param login login
    * @return OK
    */
-  getOperatorUsingGETResponse(id: number): __Observable<__StrictHttpResponse<Operator>> {
+  getOperatorUsingGETResponse(login: string): __Observable<__StrictHttpResponse<Operator>> {
     let __params = this.newParams();
     let __headers = new HttpHeaders();
     let __body: any = null;
 
     let req = new HttpRequest<any>(
       'GET',
-      this.rootUrl + `/api/operator/id/${encodeURIComponent(id)}`,
+      this.rootUrl + `/api/operator/${encodeURIComponent(login)}`,
       __body,
       {
         headers: __headers,
@@ -231,11 +231,11 @@ class OperatorControllerService extends __BaseService {
   }
   /**
    * getOperator
-   * @param id id
+   * @param login login
    * @return OK
    */
-  getOperatorUsingGET(id: number): __Observable<Operator> {
-    return this.getOperatorUsingGETResponse(id).pipe(
+  getOperatorUsingGET(login: string): __Observable<Operator> {
+    return this.getOperatorUsingGETResponse(login).pipe(
       __map(_r => _r.body as Operator)
     );
   }

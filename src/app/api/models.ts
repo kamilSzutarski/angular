@@ -1,4 +1,5 @@
 export { Department } from './models/department';
+export { ModelAndView } from './models/model-and-view';
 export { Operator } from './models/operator';
 export { Pageable } from './models/pageable';
 export { PageDepartment } from './models/page-department';
@@ -9,3 +10,4 @@ export { Role } from './models/role';
 export { Sort } from './models/sort';
 export { TicketElement } from './models/ticket-element';
 export { TicketHeader } from './models/ticket-header';
+export { View } from './models/view';
